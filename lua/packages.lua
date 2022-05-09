@@ -134,7 +134,7 @@ require('packer').startup(function()
   use "JoosepAlviste/nvim-ts-context-commentstring"
   use { "p00f/nvim-ts-rainbow" }
   -- use {'christianchiarulli/nvim-ts-rainbow'}
-  use "nvim-treesitter/playground"
+--  use "nvim-treesitter/playground"
   use "windwp/nvim-ts-autotag"
   use "romgrk/nvim-treesitter-context"
   use "mizlan/iswap.nvim"
