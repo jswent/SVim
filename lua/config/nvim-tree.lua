@@ -1,8 +1,17 @@
 -- following options are the default
 -- each of these are documented in `:help nvim-tree.OPTION_NAME`
 
-vim.g.nvim_tree_indent_markers = 1
+--variable deprecated:
+--vim.g.nvim_tree_indent_markers = 1
 vim.g.nvim_tree_git_hl = 1
+
+vim.g.nvim_tree_show_icons = {
+  git = 1,
+  folders = 1,
+  files = 1,
+  folder_arrows = 1,
+  tree_width = 30,
+}
 
 vim.g.nvim_tree_icons = {
   default = "",
@@ -40,6 +49,11 @@ end
 local tree_cb = nvim_tree_config.nvim_tree_callback
 
 nvim_tree.setup {
+  renderer = {
+    indent_markers = {
+      enable = true,
+    },
+  },
   update_to_buf_dir = {
     enable = false,
   },
@@ -112,17 +126,17 @@ nvim_tree.setup {
   --   cmd = "trash",
   --   require_confirm = true,
   -- },
-  quit_on_open = 0,
-  git_hl = 1,
+--  quit_on_open = 0,
+--  git_hl = 1,
   -- disable_window_picker = 0,
   -- root_folder_modifier = ":t",
-  show_icons = {
-    git = 1,
-    folders = 1,
-    files = 1,
-    folder_arrows = 1,
-    tree_width = 30,
-  },
+--  show_icons = {
+--    git = 1,
+--    folders = 1,
+--    files = 1,
+--    folder_arrows = 1,
+--    tree_width = 30,
+--  },
 }
 
 vim.api.nvim_set_keymap("n", "<space>s", "<cmd>NvimTreeToggle<CR>", { noremap = true, silent = true })
