@@ -79,7 +79,7 @@ require('packer').startup(function()
   use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/cmp-emoji"
   use "hrsh7th/cmp-nvim-lua"
-  use {
+  --[[use {
     "tzachar/cmp-tabnine",
     config = function()
       local tabnine = require "cmp_tabnine.config"
@@ -98,10 +98,10 @@ require('packer').startup(function()
 
     run = "./install.sh",
     requires = "hrsh7th/nvim-cmp",
-  }
+  }--]]
 
-    -- Java
-    use "mfussenegger/nvim-jdtls"
+  -- Java
+  use "mfussenegger/nvim-jdtls"
 
   -- LSP
   use {
