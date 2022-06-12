@@ -42,6 +42,7 @@ require('packer').startup(function()
 
   use {"lunarvim/darkplus.nvim"}
   use 'shaunsingh/nord.nvim'
+  use 'xiyaowong/nvim-transparent'
   use "antoinemadec/FixCursorHold.nvim"
 
   use {
