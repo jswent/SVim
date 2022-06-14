@@ -125,6 +125,10 @@ require('packer').startup(function()
   }
   use "github/copilot.vim"
   use "RRethy/vim-illuminate"
+  --use { 
+  --  "simrat39/rust-tools.nvim",
+  --  config = [[require('config.rust-tools')]]
+  --}
 
   -- Treesitter
   use {
