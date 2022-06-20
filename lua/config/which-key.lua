@@ -73,7 +73,7 @@ local mappings = {
   ["q"] = { "<cmd>q<CR>", "Quit" },
   ["Q"] = { "<cmd>wq<CR>", "Save & Quit" },
   ["w"] = { "<cmd>w<CR>", "Save" },
-  ["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
+  ["P"] = { "<cmd>lua require'telescope'.extensions.project.project{}<CR>", "Projects" },
   ["R"] = { '<cmd>lua require("renamer").rename()<cr>', "Rename" },
   ["b"] = { "<cmd>Telescope buffers<cr>", "Buffers", },
   ["/"] = { "<cmd>CommentToggle<CR>", "Comment" },
@@ -97,7 +97,7 @@ local mappings = {
     g = { "<cmd>Telescope live_grep<CR>", "Project grep" },
     h = { "<cmd>Telescope help_tags<CR>", "Help" }, 
     b = { "<cmd>Telescope file_browser<CR>", "File browser" },
-    c = { "<cmd>Telescope current_buffer_fuzzy_find<CR>", "Current buffer" }
+    c = { "<cmd>lua require('telescope.builtin').live_grep({search_dirs={vim.fn.expand('%:p')}})<CR>", "Current buffer" }
   },
 
   l = {
