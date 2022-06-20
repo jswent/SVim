@@ -16,7 +16,7 @@ require('packer').startup(function()
       requires = {{'nvim-lua/plenary.nvim'}},
       cmd = "Telescope",
       config = [[require('config.telescope')]]
-    }
+  }
   use { "tom-anders/telescope-vim-bookmarks.nvim" }
   use { "nvim-telescope/telescope-media-files.nvim" }
   use { "nvim-telescope/telescope-ui-select.nvim" }
@@ -27,6 +27,10 @@ require('packer').startup(function()
   config = function()
     vim.defer_fn(function() require('config.which-key') end, 2000)
   end
+  }
+
+  use {"norcalli/nvim-colorizer.lua",
+      config = [[require('config.colorizer')]]
   }
 
   if vim.g.is_win or vim.g.is_mac then
@@ -42,7 +46,10 @@ require('packer').startup(function()
 
   use {"lunarvim/darkplus.nvim"}
   use 'shaunsingh/nord.nvim'
-  use 'xiyaowong/nvim-transparent'
+  use {
+    'xiyaowong/nvim-transparent',
+    config = [[require('config.nvim-transparent')]]
+  }
   use "antoinemadec/FixCursorHold.nvim"
 
   use {
