@@ -13,6 +13,7 @@ require('packer').startup(function()
 
   use {
       'nvim-telescope/telescope.nvim',
+      module = "telescope",
       requires = {{'nvim-lua/plenary.nvim'}},
       cmd = "Telescope",
       config = [[require('config.telescope')]]
