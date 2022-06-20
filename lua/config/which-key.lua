@@ -96,7 +96,8 @@ local mappings = {
     r = { "<cmd>Telescope oldfiles<CR>", "Recent files" },
     g = { "<cmd>Telescope live_grep<CR>", "Project grep" },
     h = { "<cmd>Telescope help_tags<CR>", "Help" }, 
-    b = { "<cmd>Telescope file_browser<CR>", "File browser" }
+    b = { "<cmd>Telescope file_browser<CR>", "File browser" },
+    c = { "<cmd>Telescope current_buffer_fuzzy_find<CR>", "Current buffer" }
   },
 
   l = {
