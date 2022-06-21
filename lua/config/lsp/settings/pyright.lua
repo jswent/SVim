@@ -4,6 +4,7 @@ return {
       analysis = {
         typeCheckingMode = "off",
       },
+      pythonPath = "/home/jswent/.pyenv/shims/python"
     },
   },
 }
