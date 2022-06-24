@@ -2,9 +2,9 @@
 
 vim.cmd [[
   
-  -- rofi configuration files 
+  "rofi configuration files 
   au BufRead,BufNewFile *.rasi set filetype=rofi
   
-  -- .aliases, .bash_aliases, etc.
+  ".aliases, .bash_aliases, etc.
   au BufRead,BufNewFile .*aliases set filetype=sh
 ]]
