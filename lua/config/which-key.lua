@@ -152,6 +152,14 @@ local mappings = {
     h = { "<cmd>TSHighlightCapturesUnderCursor<cr>", "Highlight" },
     p = { "<cmd>TSPlaygroundToggle<cr>", "Playground" },
   },
+
+  c = {
+    name = "Colorizer", 
+    r = { "<cmd>ColorizerReloadAllBuffers<cr>", "Reload" },
+    t = { "<cmd>ColorizerToggle<cr>", "Toggle" },
+    a = { "<cmd>ColorizerAttachToBuffer<cr>", "Attach to buffer" },
+    d = { "<cmd>ColorizerDetachFromBuffer<cr>", "Detach from buffer" },
+  },
 }
 
 local vopts = {
