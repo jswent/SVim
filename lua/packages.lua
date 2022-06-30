@@ -198,6 +198,11 @@ require('packer').startup(function()
     filetype_exclude = { "packer", "alpha", "help", "git", "markdown", "snippets", "text", "gitconfig" },
   }
 
+  use({
+    "iamcco/markdown-preview.nvim",
+    run = function() vim.fn["mkdp#util#install"]() end,
+  })
+
   -- nvim-notify
   use {
     'rcarriga/nvim-notify',
