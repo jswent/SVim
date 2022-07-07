@@ -46,7 +46,7 @@ M.setup = function()
 end
 
 local function lsp_highlight_document(client)
-  if client.resolved_capabilities.document_highlight then
+  if client.server_capabilities.document_highlight then
     local status_ok, illuminate = pcall(require, "illuminate")
     if not status_ok then
       return
@@ -82,7 +82,7 @@ M.on_attach = function(client, bufnr)
   -- vim.notify(client.name .. " starting...")
   -- TODO: refactor this into a method that checks if string in list
   if client.name == "tsserver" or client.name == "html" or client.name == "jdt.ls" then
-    client.resolved_capabilities.document_formatting = false
+    client.server_capabilities.document_formatting = false
   end
 
   if client.name == "jdt.ls" then
