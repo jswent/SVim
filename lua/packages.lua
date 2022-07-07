@@ -48,6 +48,7 @@ require('packer').startup(function()
 
   use {"lunarvim/darkplus.nvim"}
   use 'shaunsingh/nord.nvim'
+  use 'EdenEast/nightfox.nvim'  
   use {
     'xiyaowong/nvim-transparent',
     config = [[require('config.nvim-transparent')]]
@@ -79,7 +80,7 @@ require('packer').startup(function()
   -- cmp plugins
   use {
     "hrsh7th/nvim-cmp",
-    commit = "d93104244c3834fbd8f3dd01da9729920e0b5fe7",
+    --commit = "d93104244c3834fbd8f3dd01da9729920e0b5fe7",
     config = [[require('config.cmp')]]
   } -- The completion plugin
   use "hrsh7th/cmp-buffer" -- buffer completions
@@ -132,7 +133,7 @@ require('packer').startup(function()
     "folke/trouble.nvim",
     cmd = "TroubleToggle",
   }
-  use "github/copilot.vim"
+  --use "github/copilot.vim"
   use "RRethy/vim-illuminate"
   --use { 
   --  "simrat39/rust-tools.nvim",
@@ -218,4 +219,4 @@ require('packer').startup(function()
     config = [[require('config.nvim-comment')]]
   }
 
-end)
+  end)

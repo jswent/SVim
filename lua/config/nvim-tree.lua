@@ -50,9 +50,9 @@ nvim_tree.setup {
     },
     highlight_git = true,
   },
-  update_to_buf_dir = {
+  --[[update_to_buf_dir = {
     enable = false,
-  },
+  },--]]
   -- disable_netrw = true,
   hijack_netrw = true,
   open_on_setup = true,
@@ -106,7 +106,7 @@ nvim_tree.setup {
     height = 30,
     hide_root_folder = false,
     side = "left",
-    auto_resize = true,
+    --auto_resize = true,
     mappings = {
       custom_only = false,
       list = {
