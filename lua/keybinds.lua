@@ -44,3 +44,7 @@ vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
 -- better indenting
 keymap('v', '<', '<gv', { noremap = true, silent = true})
 keymap('v', '>', '>gv', { noremap = true, silent = true})
+
+-- navigate buffers 
+keymap('n', '<A-l>', "<cmd>bnext<cr>", opts)
+keymap('n', '<A-h>', "<cmd>bprevious<cr>", opts)
