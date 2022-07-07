@@ -26,10 +26,20 @@ vim.cmd[[set fillchars=fold:\ ,vert:\│,eob:\ ,msgsep:‾]]
 -- enable mouse use
 vim.cmd[[set mouse=a]]
 
+-- set global statusline
+vim.cmd[[set laststatus=3]]
+
 vim.g.nord_contrast = true
 vim.g.nord_borders = true
 vim.g.nord_disable_background = false
 vim.g.nord_italic = false
 
 -- Load the colorscheme
-require('nord').set()
+local theme = os.getenv("NVIM_THEME") 
+if(theme == "nord") then
+  require('nord').set() 
+elseif(theme == "nightfox") then
+  require('config.nightfox') 
+else 
+  vim.cmd[[colorscheme custom]]
+end
