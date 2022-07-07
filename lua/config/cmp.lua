@@ -20,6 +20,7 @@ local icons = require "config.icons"
 local kind_icons = icons.kind
 
 cmp.setup {
+  
   snippet = {
     expand = function(args)
       luasnip.lsp_expand(args.body) -- For `luasnip` users.
@@ -114,9 +115,20 @@ cmp.setup {
     select = false,
   },
   -- documentation = true,
-  documentation = {
-  	border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
-  },
+  --[[documentation = {
+    border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+    winhighlight = 'Normal:CmpPmenu,FloatBorder:CmpPmenuBorder,CursorLine:PmenuSel,Search:None',
+  },--]]
+  window = {
+    documentation = {
+      border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+      winhighlight = 'Normal:CmpPmenu,FloatBorder:CmpPmenuBorder,CursorLine:PmenuSel,Search:None', 
+    },
+    completion = {
+      border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+      winhighlight = 'Normal:CmpPmenu,FloatBorder:CmpPmenuBorder,CursorLine:PmenuSel,Search:None', 
+    }
+  }, 
   experimental = {
     ghost_text = true,
     native_menu = false,
