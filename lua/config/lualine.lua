@@ -1,12 +1,20 @@
+local custom = require('lualine.themes.nightfox') 
+custom.normal.a.bg = "#23a9d5"
+
+local theme = os.getenv("NVIM_THEME") 
+if(theme == "nord") then
+  custom = "nord" 
+end
+
 require('lualine').setup {
   options = {
     icons_enabled = true,
-    theme = 'nord',
+    theme = custom,
     component_separators = { left = '', right = ''},
     section_separators = { left = '', right = ''},
-    disabled_filetypes = { "alpha", "dashboard", "NvimTree", "Outline", "toggleterm" },
+    disabled_filetypes = { "alpha", "dashboard", "NvimTree", "Outline", "toggleterm", "Telescope" },
     always_divide_middle = true,
-    globalstatus = false,
+    globalstatus = true,
   },
   sections = {
     lualine_a = {'mode'},
