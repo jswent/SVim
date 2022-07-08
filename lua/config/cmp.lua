@@ -145,3 +145,17 @@ cmp.setup {
       end
     end 
 }
+
+-- cmp command line completion
+require'cmp'.setup.cmdline(':', {
+  sources = {
+    { name = 'cmdline' }
+  }
+})
+
+-- cmp command line search completion
+require'cmp'.setup.cmdline('/', {
+  sources = {
+    { name = 'buffer' }
+  }
+})
