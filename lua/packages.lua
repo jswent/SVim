@@ -31,6 +31,10 @@ require('packer').startup(function()
   end
   }
 
+  use { "windwp/nvim-autopairs",
+    config = [[require('config.nvim-autopairs')]] 
+  }
+
   use {"norcalli/nvim-colorizer.lua",
       config = [[require('config.colorizer')]]
   }
@@ -60,6 +64,9 @@ require('packer').startup(function()
     requires = { 'kyazdani42/nvim-web-devicons', opt = true, }, 
     config = [[require('config.lualine')]]
   }
+
+  -- VimWiki
+  use 'vimwiki/vimwiki'
 
   -- Terminal
   use { 
