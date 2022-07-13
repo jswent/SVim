@@ -3,8 +3,8 @@ return function()
     char = "|",
     show_end_of_line = true,
     disable_with_nolist = true,
-    buftype_exclude = { "terminal" },
-    filetype_exclude = { "packer", "alpha", "help", "git", "markdown", "snippets", "text", "gitconfig" },
+    buftype_exclude = { "terminal", "lsp-installer", "lsp-info" },
+    filetype_exclude = { "packer", "alpha", "help", "git", "markdown", "snippets", "text", "gitconfig", "lsp-installer" },
   })
 
   vim.cmd([[
