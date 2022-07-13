@@ -35,7 +35,7 @@ require('packer').startup(function()
     config = [[require('config.nvim-autopairs')]] 
   }
 
-  use {"norcalli/nvim-colorizer.lua",
+  use {"NvChad/nvim-colorizer.lua",
       config = [[require('config.colorizer')]]
   }
 
@@ -202,14 +202,20 @@ require('packer').startup(function()
     -- for example, context is off by default, use this to turn it on
     show_current_context = true,
     show_current_context_start = true,
+    show_end_of_line = true,
     buftype_exclude = { "terminal" },
-    filetype_exclude = { "packer", "alpha", "help", "git", "markdown", "snippets", "text", "gitconfig" },
+    filetype_exclude = { "packer", "alpha", "help", "git", "markdown", "snippets", "text", "gitconfig", "lsp-installer", "lsp-info" },
   }
 
   use({
     "iamcco/markdown-preview.nvim",
     run = function() vim.fn["mkdp#util#install"]() end,
   })
+
+  use {
+    'aserowy/tmux.nvim',
+    config = [[require('config.tmux')]]
+  }
 
   -- nvim-notify
   use {
