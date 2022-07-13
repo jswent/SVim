@@ -32,7 +32,7 @@ nvim_tree.setup {
           ignored = "◌",
         },
         folder = {
-          arrow_open = " ",
+          arrow_open = "",
           arrow_closed = "",
           default = "",
           open = "",
