@@ -46,8 +46,8 @@ keymap('v', '<', '<gv', { noremap = true, silent = true})
 keymap('v', '>', '>gv', { noremap = true, silent = true})
 
 -- navigate buffers 
-keymap('n', '<A-l>', "<cmd>bnext<cr>", opts)
-keymap('n', '<A-h>', "<cmd>bprevious<cr>", opts)
+keymap('n', '<C-]>', "<cmd>bnext<cr>", opts)
+keymap('n', '<C-[>', "<cmd>bprevious<cr>", opts)
 
 -- remove buffer 
 keymap('n', '<A-q>', '<cmd>bd<cr>', opts)
