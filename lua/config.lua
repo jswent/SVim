@@ -29,10 +29,14 @@ vim.cmd[[set mouse=a]]
 -- set global statusline
 vim.cmd[[set laststatus=3]]
 
+-- set nord theme options
 vim.g.nord_contrast = true
 vim.g.nord_borders = true
 vim.g.nord_disable_background = false
 vim.g.nord_italic = false
+
+-- vimwiki options (move to config file later)
+vim.g.vimwiki_global_ext = 0
 
 -- Load the colorscheme
 local theme = os.getenv("NVIM_THEME") 
