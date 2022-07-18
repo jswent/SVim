@@ -47,3 +47,8 @@ elseif(theme == "nightfox") then
 else 
   vim.cmd[[colorscheme custom]]
 end
+
+-- Load vimr settings
+if(vim.fn.has("gui_vimr") == 1) then
+  vim.cmd[[colorscheme nord]]
+end
