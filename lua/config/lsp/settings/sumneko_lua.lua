@@ -3,7 +3,7 @@ return {
     Lua = {
       diagnostics = {
         globals = { "vim" },
-        disable = { "trailing-space", "lowercase-global" },
+        disable = { "trailing-space", "lowercase-global", "different-requires" },
       },
       workspace = {
         library = {
