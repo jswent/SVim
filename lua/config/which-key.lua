@@ -97,7 +97,8 @@ local mappings = {
     g = { "<cmd>Telescope live_grep<CR>", "Project grep" },
     h = { "<cmd>Telescope help_tags<CR>", "Help" }, 
     b = { "<cmd>Telescope file_browser<CR>", "File browser" },
-    c = { "<cmd>lua require('telescope.builtin').live_grep({search_dirs={vim.fn.expand('%:p')}})<CR>", "Current buffer" }
+    --c = { "<cmd>lua require('telescope.builtin').live_grep({search_dirs={vim.fn.expand('%:p')}})<CR>", "Current buffer" }
+    c = { "<cmd>Telescope current_buffer_fuzzy_find fuzzy=false case_mode=ignore_case<CR>", "Current buffer" }
   },
 
   l = {
