@@ -416,7 +416,7 @@ vim.cmd("highlight Normal guifg=#cdcecf guibg=NONE gui=NONE guisp=NONE")
 local function set_terminal()
    -- stylua: ignore
   local colors = {
-    "#393b44", "#c94f6d", "#81b29a", "#dbc074", "#719cd6", "#9d79d6", "#63cdcf", "#dfdfe0", "#565860", "#d16982", "#8db9a4", "#e0c988", "#86abdc", "#baa1e2", "#7ad4d6", "#e4e4e5",
+    "#393b44", "#c94f6d", "#81b29a", "#dbc074", "#23a9d5", "#9d79d6", "#63cdcf", "#dfdfe0", "#6c7793", "#d16982", "#8db9a4", "#4b5975", "#86abdc", "#baa1e2", "#7ad4d6", "#e4e4e5",
   }
   for i, c in ipairs(colors) do
     local n = "terminal_color_" .. i - 1
