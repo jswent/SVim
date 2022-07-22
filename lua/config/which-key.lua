@@ -173,7 +173,7 @@ local vopts = {
 }
 
 local vmappings = {
-  ["/"] = { "<cmd>'<,'>CommentToggle<cr>", "Block comment" },
+  ["/"] = { ":'<,'>CommentToggle<cr>", "Block comment" },
 }
 
 require("which-key").register(mappings, opts)
