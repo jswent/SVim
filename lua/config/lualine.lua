@@ -2,7 +2,7 @@ local custom = require('lualine.themes.nightfox')
 custom.normal.a.bg = "#23a9d5"
 
 local theme = os.getenv("NVIM_THEME") 
-if(theme == "nord") then
+if(theme == "nord" or vim.fn.has("gui_vimr") == 1) then
   custom = "nord" 
 end
 
