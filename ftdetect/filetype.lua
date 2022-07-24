@@ -7,6 +7,7 @@ vim.cmd [[
   
   ".aliases, .bash_aliases, etc.
   au BufRead,BufNewFile .*aliases set filetype=sh
+  au BufRead,BufNewFile *aliases set filetype=sh
 
   "tmux configuration files
   au BufRead,BufNewFile *.tmux set filetype=tmux
