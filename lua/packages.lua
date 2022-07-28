@@ -8,7 +8,7 @@ vim.cmd [[
 
 require('packer').startup(function()
   use 'wbthomason/packer.nvim'
-  use {'kyazdani42/nvim-web-devicons', event = 'VimEnter'}
+  use {'kyazdani42/nvim-web-devicons'}
   use { 'goolord/alpha-nvim', event = 'VimEnter', config = [[require('config.alpha-nvim')]] }
 
   use {
@@ -190,6 +190,7 @@ require('packer').startup(function()
     requires = 'kyazdani42/nvim-web-devicons',
     config = [[require('config.bufferline')]]
   }
+  use 'famiu/bufdelete.nvim'
 
   -- indent-blankline
   use {
