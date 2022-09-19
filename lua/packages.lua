@@ -77,6 +77,12 @@ require('packer').startup(function()
     config = [[require('config.comment')]]
   } 
 
+  -- Terminal
+  use {
+    "akinsho/toggleterm.nvim",
+    config = [[require('config.toggleterm')]]
+  }
+
   -- Telescope
   use {
       'nvim-telescope/telescope.nvim',
