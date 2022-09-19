@@ -77,7 +77,7 @@ local mappings = {
   --["R"] = { '<cmd>lua require("renamer").rename()<cr>', "Rename" },
   ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
   ["b"] = { "<cmd>Telescope buffers<cr>", "Buffers", },
-  ["/"] = { "<cmd>CommentToggle<CR>", "Comment" },
+  ["/"] = { '<cmd>lua require("Comment.api").toggle.linewise.current()<CR>', "Comment" },
 
   p = {
     name = "Packer",
@@ -174,7 +174,7 @@ local vopts = {
 }
 
 local vmappings = {
-  ["/"] = { ":'<,'>CommentToggle<cr>", "Block comment" },
+  ["/"] = { '<ESC><CMD>lua require("Comment.api").toggle.linewise(vim.fn.visualmode())<CR>', "Comment" },
 }
 
 require("which-key").register(mappings, opts)

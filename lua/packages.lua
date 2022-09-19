@@ -71,6 +71,12 @@ require('packer').startup(function()
     config = [[require('config.illuminate')]]
   }
 
+  -- Comment
+  use {
+    "numToStr/Comment.nvim",
+    config = [[require('config.comment')]]
+  } 
+
   -- Telescope
   use {
       'nvim-telescope/telescope.nvim',
