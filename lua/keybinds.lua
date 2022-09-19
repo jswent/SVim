@@ -50,7 +50,4 @@ keymap('n', '<C-]>', "<cmd>bnext<cr>", opts)
 keymap('n', '<C-[>', "<cmd>bprevious<cr>", opts)
 
 -- remove buffer 
-keymap('n', '<A-q>', '<cmd>Bdelete<cr>', opts)
-
--- remap buffer delete
-vim.cmd[[cnoremap bd Bdelete]]
+keymap('n', 'Q', '<cmd>Bdelete<cr>', opts)

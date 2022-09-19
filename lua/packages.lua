@@ -169,4 +169,7 @@ require('packer').startup(function()
   use "rcarriga/nvim-dap-ui"
   use "Pocco81/DAPInstall.nvim"
 
+  -- Helpers
+  use "famiu/bufdelete.nvim"
+
 end)

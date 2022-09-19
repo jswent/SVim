@@ -74,7 +74,8 @@ local mappings = {
   ["Q"] = { "<cmd>wqa!<CR>", "Save & Quit" },
   ["w"] = { "<cmd>w<CR>", "Save" },
   ["P"] = { "<cmd>lua require'telescope'.extensions.project.project{}<CR>", "Projects" },
-  ["R"] = { '<cmd>lua require("renamer").rename()<cr>', "Rename" },
+  --["R"] = { '<cmd>lua require("renamer").rename()<cr>', "Rename" },
+  ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
   ["b"] = { "<cmd>Telescope buffers<cr>", "Buffers", },
   ["/"] = { "<cmd>CommentToggle<CR>", "Comment" },
 
@@ -154,7 +155,7 @@ local mappings = {
     p = { "<cmd>TSPlaygroundToggle<cr>", "Playground" },
   },
 
-  c = {
+  C = {
     name = "Colorizer", 
     r = { "<cmd>ColorizerReloadAllBuffers<cr>", "Reload" },
     t = { "<cmd>ColorizerToggle<cr>", "Toggle" },
