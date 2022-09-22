@@ -144,6 +144,7 @@ require('packer').startup(function()
   use "windwp/nvim-ts-autotag"
   use "romgrk/nvim-treesitter-context"
   use "mizlan/iswap.nvim"
+  use "kylechui/nvim-surround"
   
   -- bufferline
   use {
