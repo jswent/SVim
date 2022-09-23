@@ -26,22 +26,18 @@ vim.cmd [[
 
 require('packer').startup(function()
   use 'wbthomason/packer.nvim'
+
+  -- Lua requirements
+  use "nvim-lua/plenary.nvim"
+
   use {'kyazdani42/nvim-web-devicons'}
-  use {
-    'goolord/alpha-nvim', 
-    event = "VimEnter",
-    config = [[require('config.alpha-nvim')]]
-  }
-  use {
-    "lukas-reineke/indent-blankline.nvim",
-    config = [[require('config.indent-blankline')]]
-  }
+  use "goolord/alpha-nvim"
+  use "lukas-reineke/indent-blankline.nvim"
 
   -- cmp plugins
   use {
     "hrsh7th/nvim-cmp",
     --commit = "d93104244c3834fbd8f3dd01da9729920e0b5fe7",
-    config = [[require('config.cmp')]]
   } -- The completion plugin
   use "hrsh7th/cmp-buffer" -- buffer completions
   use "hrsh7th/cmp-path" -- path completions
@@ -57,7 +53,6 @@ require('packer').startup(function()
   -- LSP
   use {
     "neovim/nvim-lspconfig",
-    config = [[require('config.lsp')]]
   }
   --use "williamboman/nvim-lsp-installer"
   use "williamboman/mason.nvim"
@@ -66,55 +61,27 @@ require('packer').startup(function()
   use "ray-x/lsp_signature.nvim"
   use "folke/trouble.nvim"
   
-  use {
-    "RRethy/vim-illuminate",
-    config = [[require('config.illuminate')]]
-  }
+  use "RRethy/vim-illuminate"
 
   -- Comment
-  use {
-    "numToStr/Comment.nvim",
-    config = [[require('config.comment')]]
-  } 
+  use "numToStr/Comment.nvim" 
 
   -- Terminal
-  use {
-    "akinsho/toggleterm.nvim",
-    config = [[require('config.toggleterm')]]
-  }
+  use "akinsho/toggleterm.nvim"
 
   -- Telescope
-  use {
-      'nvim-telescope/telescope.nvim',
-      module = "telescope",
-      requires = {{'nvim-lua/plenary.nvim'}},
-      cmd = "Telescope",
-      config = [[require('config.telescope')]]
-  }
+  use "nvim-telescope/telescope.nvim" 
   use { "nvim-telescope/telescope-ui-select.nvim" }
   use { "nvim-telescope/telescope-file-browser.nvim" }
 
-  use {"folke/which-key.nvim",
-  event = "VimEnter",
-  config = function()
-    vim.defer_fn(function() require('config.which-key') end, 2000)
-  end
-  }
+  -- Keybinding
+  use "folke/which-key.nvim"
 
-  use {
-    "windwp/nvim-autopairs",
-    config = [[require('config.nvim-autopairs')]]
-  }
+  use "windwp/nvim-autopairs"
 
-  use {
-    "NvChad/nvim-colorizer.lua",
-    config = [[require('config.colorizer')]]
-  }
+  use "NvChad/nvim-colorizer.lua"
 
-  use {
-    'kyazdani42/nvim-tree.lua',
-    config = [[require('config.nvim-tree')]]
-  }
+  use 'kyazdani42/nvim-tree.lua'
 
   use {"lunarvim/darkplus.nvim"}
   use 'shaunsingh/nord.nvim'
@@ -124,7 +91,6 @@ require('packer').startup(function()
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true, }, 
-    config = [[require('config.lualine')]]
   }
 
   -- snippets
@@ -135,7 +101,6 @@ require('packer').startup(function()
   use {
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
-    config = [[require('config.treesitter')]]
   }
   use "JoosepAlviste/nvim-ts-context-commentstring"
   use { "p00f/nvim-ts-rainbow" }
@@ -150,28 +115,15 @@ require('packer').startup(function()
   use {
     'akinsho/bufferline.nvim',
     requires = 'kyazdani42/nvim-web-devicons',
-    config = [[require('config.bufferline')]]
   }
 
   -- Notify
-  use {
-    'rcarriga/nvim-notify',
-    config = [[require('config.notify')]]
-  }
+  use 'rcarriga/nvim-notify'
 
   -- Git
-  use {
-    "f-person/git-blame.nvim",
-    config = [[require('config.git-blame')]]
-  }
-  use {
-    "lewis6991/gitsigns.nvim",
-    config = [[require('config.gitsigns')]]
-  }
-  use {
-    "ruifm/gitlinker.nvim",
-    config = [[require('config.gitlinker')]]
-  }
+  use "f-person/git-blame.nvim"
+  use "lewis6991/gitsigns.nvim"
+  use "ruifm/gitlinker.nvim"
   use "mattn/vim-gist"
   use "mattn/webapi-vim"
   use "https://github.com/rhysd/conflict-marker.vim"
