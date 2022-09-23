@@ -1,3 +1,4 @@
 require('keybinds')
 require('packages')
-require('config')
+require('options')
+require('loadorder')
