@@ -1,6 +1,17 @@
-local alpha = require("alpha")
+local status_ok, alpha = pcall(require, "alpha")
+if not status_ok then
+  return
+end
+
+local dashboard = require "alpha.themes.dashboard"
+
+local function button(sc, txt, keybind, keybind_opts)
+  local b = dashboard.button(sc, txt, keybind, keybind_opts)
+  b.opts.hl_shortcut = "Macro"
+  return b
+end
+
 local icons = require "config.icons"
-local dashboard = require("alpha.themes.dashboard")
 
 -- Set header
 dashboard.section.header.val = {
