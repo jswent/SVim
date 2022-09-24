@@ -82,15 +82,15 @@ require('packer').startup(function()
 
   use 'kyazdani42/nvim-tree.lua'
 
+  -- Themes
+  use "folke/tokyonight.nvim"
   use {"lunarvim/darkplus.nvim"}
   use 'shaunsingh/nord.nvim'
   use 'EdenEast/nightfox.nvim'
+
   use "antoinemadec/FixCursorHold.nvim"
 
-  use {
-    'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true, }, 
-  }
+  use 'nvim-lualine/lualine.nvim'
 
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
