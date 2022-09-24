@@ -112,10 +112,7 @@ require('packer').startup(function()
   use "kylechui/nvim-surround"
   
   -- bufferline
-  use {
-    'akinsho/bufferline.nvim',
-    requires = 'kyazdani42/nvim-web-devicons',
-  }
+  -- use 'akinsho/bufferline.nvim'
 
   -- Notify
   use 'rcarriga/nvim-notify'

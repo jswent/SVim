@@ -14,7 +14,7 @@ vim.opt.relativenumber = true
 vim.opt.cursorline = true
 
 vim.opt.showmode = false
-vim.opt.showtabline = 2
+-- vim.opt.showtabline = 2
 
 --set default notify function
 vim.notify = require('notify')
