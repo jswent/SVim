@@ -48,7 +48,7 @@ end
 function M.get_svim_version()
   local current_branch = M.get_svim_branch()
 
-  local svim_version = current_branch .. "--" .. M.get_svim_current_sha()
+  local svim_version = current_branch .. "-" .. M.get_svim_current_sha()
   return svim_version
 end
 
