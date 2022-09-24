@@ -51,14 +51,13 @@ require('packer').startup(function()
   use "mfussenegger/nvim-jdtls"
 
   -- LSP
-  use {
-    "neovim/nvim-lspconfig",
-  }
+  use "neovim/nvim-lspconfig"
   --use "williamboman/nvim-lsp-installer"
   use "williamboman/mason.nvim"
   use "williamboman/mason-lspconfig.nvim"
   use "jose-elias-alvarez/null-ls.nvim"
   use "ray-x/lsp_signature.nvim"
+  use "SmiteshP/nvim-navic"
   use "folke/trouble.nvim"
   
   use "RRethy/vim-illuminate"
@@ -107,7 +106,7 @@ require('packer').startup(function()
   -- use {'christianchiarulli/nvim-ts-rainbow'}
   --  use "nvim-treesitter/playground"
   use "windwp/nvim-ts-autotag"
-  use "romgrk/nvim-treesitter-context"
+  -- use "romgrk/nvim-treesitter-context"
   use "mizlan/iswap.nvim"
   use "kylechui/nvim-surround"
   
