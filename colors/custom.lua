@@ -131,7 +131,7 @@ vim.api.nvim_set_hl(0, "FocusedSymbol", { link = "Search" })
 vim.api.nvim_set_hl(0, "FoldColumn", { fg = "#71839b" })
 vim.api.nvim_set_hl(0, "Folded", { bg = "#212e3f", fg = "#71839b" })
 vim.api.nvim_set_hl(0, "Function", { fg = "#86abdc" })
-vim.api.nvim_set_hl(0, "GitBlame", { fg = "#71839b", bg = "#29394f"})
+vim.api.nvim_set_hl(0, "GitBlame", { fg = "#71839b", bg = "#29394f" })
 vim.api.nvim_set_hl(0, "GitGutterAdd", { fg = "#81b29a" })
 vim.api.nvim_set_hl(0, "GitGutterChange", { fg = "#dbc074" })
 vim.api.nvim_set_hl(0, "GitGutterDelete", { fg = "#c94f6d" })
@@ -233,6 +233,7 @@ vim.api.nvim_set_hl(0, "ModesDelete", { bg = "#c94f6d" })
 vim.api.nvim_set_hl(0, "ModesInsert", { bg = "#63cdcf" })
 vim.api.nvim_set_hl(0, "ModesVisual", { bg = "#9d79d6" })
 vim.api.nvim_set_hl(0, "MoreMsg", { bold = true, fg = "#719cd6" })
+vim.api.nvim_set_hl(0, "NavicText", { link = "Normal" })
 vim.api.nvim_set_hl(0, "NeoTreeDimText", { link = "Conceal" })
 vim.api.nvim_set_hl(0, "NeoTreeDirectoryIcon", { fg = "#719cd6" })
 vim.api.nvim_set_hl(0, "NeoTreeDirectoryName", { fg = "#719cd6" })
@@ -418,9 +419,10 @@ vim.api.nvim_set_hl(0, "rustTSField", { fg = "#aeafb0" })
 vim.cmd("highlight Normal guifg=#cdcecf guibg=NONE gui=NONE guisp=NONE")
 
 local function set_terminal()
-   -- stylua: ignore
+  -- stylua: ignore
   local colors = {
-    "#393b44", "#c94f6d", "#81b29a", "#dbc074", "#23a9d5", "#9d79d6", "#63cdcf", "#dfdfe0", "#6c7793", "#d16982", "#8db9a4", "#4b5975", "#86abdc", "#baa1e2", "#7ad4d6", "#e4e4e5",
+    "#393b44", "#c94f6d", "#81b29a", "#dbc074", "#23a9d5", "#9d79d6", "#63cdcf", "#dfdfe0", "#6c7793", "#d16982",
+    "#8db9a4", "#4b5975", "#86abdc", "#baa1e2", "#7ad4d6", "#e4e4e5",
   }
   for i, c in ipairs(colors) do
     local n = "terminal_color_" .. i - 1
