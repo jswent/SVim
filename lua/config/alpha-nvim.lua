@@ -39,13 +39,17 @@ dashboard.section.buttons.val = {
 -- local fortune = require("alpha.fortune")
 -- dashboard.section.footer.val = fortune()
 
-  local function footer()
-    return "jwswent.com"
-  end
+local text = require "utils.text"
+local svim_version = require("utils.git").get_svim_version()
 
-dashboard.section.footer.val = footer()
+dashboard.section.footer.val = text.align_center({ width = 0 }, {
+    "",
+    "jwswent.com",
+    svim_version,
+  }, 0.5)
 
 dashboard.section.footer.opts.hl = "Type"
+dashboard.section.footer.opts.position = "center"
 dashboard.section.header.opts.hl = "Keyword"
 dashboard.section.buttons.opts.hl = "Keyword"
 
