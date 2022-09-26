@@ -59,6 +59,7 @@ require('packer').startup(function()
   use "ray-x/lsp_signature.nvim"
   use "SmiteshP/nvim-navic"
   use "folke/trouble.nvim"
+  use "j-hui/fidget.nvim"
   
   use "RRethy/vim-illuminate"
 
