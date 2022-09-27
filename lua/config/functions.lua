@@ -87,6 +87,16 @@ function M.toggle_diagnostics()
   end
 end
 
+local virtualtext_active = true
+function M.toggle_virtualtext()
+  virtualtext_active = not virtualtext_active
+  if virtualtext_active then
+    vim.diagnostic.config({ virtual_text = true })
+  else
+    vim.diagnostic.config({ virtual_text = false })
+  end
+end
+
 function M.isempty(s)
   return s == nil or s == ""
 end
