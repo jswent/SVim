@@ -69,6 +69,9 @@ require('packer').startup(function()
   -- Terminal
   use "akinsho/toggleterm.nvim"
 
+  -- Project
+  use "windwp/nvim-spectre"
+
   -- Telescope
   use "nvim-telescope/telescope.nvim" 
   use { "nvim-telescope/telescope-ui-select.nvim" }
@@ -77,10 +80,12 @@ require('packer').startup(function()
   -- Keybinding
   use "folke/which-key.nvim"
 
+  -- Editing support
   use "windwp/nvim-autopairs"
-
   use "NvChad/nvim-colorizer.lua"
+  use "karb94/neoscroll.nvim"
 
+  -- File Explorer
   use 'kyazdani42/nvim-tree.lua'
 
   -- Themes
@@ -88,8 +93,6 @@ require('packer').startup(function()
   use {"lunarvim/darkplus.nvim"}
   use 'shaunsingh/nord.nvim'
   use 'EdenEast/nightfox.nvim'
-
-  use "antoinemadec/FixCursorHold.nvim"
 
   use 'nvim-lualine/lualine.nvim'
 
@@ -133,5 +136,12 @@ require('packer').startup(function()
 
   -- Helpers
   use "famiu/bufdelete.nvim"
+
+  -- Markdown
+  use {
+    "iamcco/markdown-preview.nvim",
+    run = "cd app && npm install",
+    ft = "markdown",
+  }
 
 end)
