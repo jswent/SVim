@@ -17,7 +17,7 @@ lualine.setup {
     theme = custom,
     component_separators = { left = '', right = ''},
     section_separators = { left = '', right = ''},
-    disabled_filetypes = { "alpha", "dashboard", "NvimTree", "Outline", "toggleterm", "Telescope" },
+    disabled_filetypes = { "alpha", "dashboard", "NvimTree", "Outline", "toggleterm", "TelescopePrompt" },
     always_divide_middle = true,
     globalstatus = true,
   },
