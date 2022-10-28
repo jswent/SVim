@@ -88,6 +88,9 @@ require('packer').startup(function()
   -- File Explorer
   use 'kyazdani42/nvim-tree.lua'
 
+  -- Buffer Switching
+  use "ghillb/cybu.nvim"
+
   -- Themes
   use "folke/tokyonight.nvim"
   use {"lunarvim/darkplus.nvim"}
