@@ -44,6 +44,8 @@ if(theme == "nord") then
   require('nord').set() 
 elseif(theme == "nightfox") then
   require('config.nightfox') 
+elseif(theme == "tokyonight") then
+  vim.cmd[[colorscheme tokyonight-storm]]
 else 
   vim.cmd[[colorscheme custom]]
 end
