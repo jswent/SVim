@@ -20,7 +20,7 @@ local icons = require "config.icons"
 local kind_icons = icons.kind
 
 cmp.setup {
-  
+
   snippet = {
     expand = function(args)
       luasnip.lsp_expand(args.body) -- For `luasnip` users.
@@ -114,40 +114,43 @@ cmp.setup {
   },--]]
   window = {
     documentation = {
-      border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
-      winhighlight = 'Normal:CmpPmenu,FloatBorder:CmpPmenuBorder,CursorLine:PmenuSel,Search:None', 
+      border = "rounded",
+      winhighlight = 'Normal:CmpPmenu,FloatBorder:CmpPmenuBorder,CursorLine:PmenuSel,Search:None',
     },
     completion = {
-      border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
-      winhighlight = 'Normal:CmpPmenu,FloatBorder:CmpPmenuBorder,CursorLine:PmenuSel,Search:None', 
+      border = "rounded",
+      winhighlight = 'Normal:CmpPmenu,FloatBorder:CmpPmenuBorder,CursorLine:PmenuSel,Search:None',
     }
-  }, 
+  },
   experimental = {
     ghost_text = true,
     native_menu = false,
   },
   enabled = function()
-      -- disable completion in comments
-      local context = require 'cmp.config.context'
-      -- keep command mode completion enabled when cursor is in a comment
-      if vim.api.nvim_get_mode().mode == 'c' then
-        return true
-      else
-        return not context.in_treesitter_capture("comment") 
+    -- disable completion in Telescope
+    local buftype = vim.api.nvim_buf_get_option(0, "buftype")
+    if buftype == "prompt" then return false end
+    -- disable completion in comments
+    local context = require 'cmp.config.context'
+    -- keep command mode completion enabled when cursor is in a comment
+    if vim.api.nvim_get_mode().mode == 'c' then
+      return true
+    else
+      return not context.in_treesitter_capture("comment")
           and not context.in_syntax_group("Comment")
-      end
-    end 
+    end
+  end
 }
 
 -- cmp command line completion
-require'cmp'.setup.cmdline(':', {
+require 'cmp'.setup.cmdline(':', {
   sources = {
     { name = 'cmdline' }
   }
 })
 
 -- cmp command line search completion
-require'cmp'.setup.cmdline('/', {
+require 'cmp'.setup.cmdline('/', {
   sources = {
     { name = 'buffer' }
   }

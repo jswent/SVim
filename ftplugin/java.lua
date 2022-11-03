@@ -9,7 +9,7 @@ if not status_cmp_ok then
   return
 end
 capabilities.textDocument.completion.completionItem.snippetSupport = false
-capabilities = cmp_nvim_lsp.update_capabilities(capabilities)
+capabilities = cmp_nvim_lsp.default_capabilities(capabilities)
 
 local status, jdtls = pcall(require, "jdtls")
 if not status then
@@ -44,7 +44,7 @@ local workspace_dir = WORKSPACE_PATH .. project_name
 
 -- TODO: Testing
 
-JAVA_DAP_ACTIVE = false 
+JAVA_DAP_ACTIVE = false
 
 local bundles = {}
 
@@ -85,7 +85,7 @@ local config = {
     "java.base/java.lang=ALL-UNNAMED",
 
     -- 💀
-    "-jar", 
+    "-jar",
     vim.fn.glob(home .. "/.local/share/nvim/mason/packages/jdtls/plugins/org.eclipse.equinox.launcher_*.jar"),
     -- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^                                       ^^^^^^^^^^^^^^
     -- Must point to the                                                     Change this to
@@ -195,6 +195,10 @@ local config = {
   init_options = {
     -- bundles = {},
     bundles = bundles,
+    -- Work with fidget.nvim
+    -- extendedClientCapabilities = {
+    --     progressReportProvider = false,
+    -- },
   },
 }
 
