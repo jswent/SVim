@@ -129,7 +129,9 @@ require('packer').startup(function()
   use "ruifm/gitlinker.nvim"
   use "mattn/vim-gist"
   use "mattn/webapi-vim"
-  use "https://github.com/rhysd/conflict-marker.vim"
+  -- use "https://github.com/rhysd/conflict-marker.vim"
+  use "TimUntersberger/neogit"
+  use "sindrets/diffview.nvim"
 
   -- DAP
   use "mfussenegger/nvim-dap"
@@ -139,6 +141,9 @@ require('packer').startup(function()
 
   -- Helpers
   use "famiu/bufdelete.nvim"
+
+  -- Viewers
+  use "nacro90/numb.nvim"
 
   -- Markdown
   use {
