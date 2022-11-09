@@ -24,13 +24,29 @@ vim.cmd [[
   augroup end
 ]]
 
-require('packer').startup(function()
-  use 'wbthomason/packer.nvim'
+-- Use a protected call so we don"t error out on first use
+local status_ok, packer = pcall(require, "packer")
+if not status_ok then
+  return
+end
+
+-- Have packer use a popup window
+packer.init {
+  display = {
+    open_fn = function()
+      return require("packer.util").float { border = "rounded" }
+    end,
+    prompt_border = "rounded", -- Border style of prompt popups.
+  },
+}
+
+packer.startup(function()
+  use "wbthomason/packer.nvim"
 
   -- Lua requirements
   use "nvim-lua/plenary.nvim"
 
-  use {'kyazdani42/nvim-web-devicons'}
+  use "kyazdani42/nvim-web-devicons"
   use "goolord/alpha-nvim"
   use "lukas-reineke/indent-blankline.nvim"
 
@@ -60,11 +76,11 @@ require('packer').startup(function()
   use "SmiteshP/nvim-navic"
   use "folke/trouble.nvim"
   use "j-hui/fidget.nvim"
-  
+
   use "RRethy/vim-illuminate"
 
   -- Comment
-  use "numToStr/Comment.nvim" 
+  use "numToStr/Comment.nvim"
 
   -- Terminal
   use "akinsho/toggleterm.nvim"
@@ -73,9 +89,9 @@ require('packer').startup(function()
   use "windwp/nvim-spectre"
 
   -- Telescope
-  use "nvim-telescope/telescope.nvim" 
-  use { "nvim-telescope/telescope-ui-select.nvim" }
-  use { "nvim-telescope/telescope-file-browser.nvim" }
+  use "nvim-telescope/telescope.nvim"
+  use "nvim-telescope/telescope-ui-select.nvim"
+  use "nvim-telescope/telescope-file-browser.nvim"
 
   -- Keybinding
   use "folke/which-key.nvim"
@@ -86,42 +102,42 @@ require('packer').startup(function()
   use "karb94/neoscroll.nvim"
 
   -- File Explorer
-  use 'kyazdani42/nvim-tree.lua'
+  use "kyazdani42/nvim-tree.lua"
 
   -- Buffer Switching
   use "ghillb/cybu.nvim"
 
   -- Themes
   use "folke/tokyonight.nvim"
-  use {"lunarvim/darkplus.nvim"}
-  use 'shaunsingh/nord.nvim'
-  use 'EdenEast/nightfox.nvim'
+  use "lunarvim/darkplus.nvim"
+  use "shaunsingh/nord.nvim"
+  use "EdenEast/nightfox.nvim"
 
-  use 'nvim-lualine/lualine.nvim'
+  use "nvim-lualine/lualine.nvim"
 
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
 
-    -- Treesitter
+  -- Treesitter
   use {
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
   }
   use "JoosepAlviste/nvim-ts-context-commentstring"
-  use { "p00f/nvim-ts-rainbow" }
-  -- use {'christianchiarulli/nvim-ts-rainbow'}
+  use "p00f/nvim-ts-rainbow"
+  -- use {"christianchiarulli/nvim-ts-rainbow"}
   --  use "nvim-treesitter/playground"
   use "windwp/nvim-ts-autotag"
   -- use "romgrk/nvim-treesitter-context"
   use "mizlan/iswap.nvim"
   use "kylechui/nvim-surround"
-  
+
   -- bufferline
-  -- use 'akinsho/bufferline.nvim'
+  -- use "akinsho/bufferline.nvim"
 
   -- Notify
-  use 'rcarriga/nvim-notify'
+  use "rcarriga/nvim-notify"
 
   -- Git
   use "f-person/git-blame.nvim"
