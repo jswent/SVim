@@ -125,7 +125,7 @@ packer.startup(function()
     run = ":TSUpdate",
   }
   use "JoosepAlviste/nvim-ts-context-commentstring"
-  use "p00f/nvim-ts-rainbow"
+  use "mrjones2014/nvim-ts-rainbow"
   -- use {"christianchiarulli/nvim-ts-rainbow"}
   --  use "nvim-treesitter/playground"
   use "windwp/nvim-ts-autotag"

@@ -17,7 +17,7 @@ local servers = {
   "jdtls",
   "jsonls",
   "solc",
-  "sumneko_lua",
+  "lua_ls",
   "tflint",
   "terraformls",
   "tsserver",
@@ -28,7 +28,8 @@ local servers = {
   "rust_analyzer",
   "taplo",
   "zk@v0.10.1",
-  "lemminx"
+  "lemminx",
+  "gopls"
 }
 
 local settings = {
@@ -65,9 +66,9 @@ for _, server in pairs(servers) do
 
   server = vim.split(server, "@")[1]
 
-  if server == "sumneko_lua" then
-    local sumneko_opts = require "config.lsp.settings.sumneko_lua"
-    opts = vim.tbl_deep_extend("force", sumneko_opts, opts)
+  if server == "lua_ls" then
+    local lua_opts = require "config.lsp.settings.lua_ls"
+    opts = vim.tbl_deep_extend("force", lua_opts, opts)
   end
 
   if server == "eslint" then

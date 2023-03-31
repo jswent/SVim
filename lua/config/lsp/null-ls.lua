@@ -20,5 +20,6 @@ null_ls.setup {
     formatting.black.with { extra_args = { "--fast" } },
     formatting.stylua.with { extra_args = { "--indent-type Tabs", "--indent-width 2" }, },
     formatting.google_java_format,
+    formatting.gofmt,
   },
 }
