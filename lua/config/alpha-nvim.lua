@@ -27,13 +27,13 @@ dashboard.section.header.val = {
 
 -- Set menu
 dashboard.section.buttons.val = {
-    dashboard.button("f", icons.documents.Files .. "  > Find file", ":Telescope find_files <CR>"),
-    dashboard.button("r", icons.ui.History .. "  > Recent files", ":Telescope oldfiles <CR>"),
-    dashboard.button("g", icons.ui.List .. "  > Project Grep", ":Telescope live_grep <CR>"),
+    dashboard.button("f", icons.documents.Files .. " > Find file", ":Telescope find_files <CR>"),
+    dashboard.button("r", icons.ui.History .. " > Recent files", ":Telescope oldfiles <CR>"),
+    dashboard.button("g", icons.ui.List .. " > Project Grep", ":Telescope live_grep <CR>"),
     dashboard.button("u", "  > Update plugins" , ":PackerSync<CR>"),
-    dashboard.button("e", icons.ui.NewFile .. "  > New file", ":ene <BAR> startinsert <CR>"),
-    dashboard.button("c", icons.ui.Gear .. "  > Config", ":e ~/.config/nvim/init.lua <CR>"),
-    dashboard.button("q", icons.diagnostics.Error .. "  > Quit", ":qa<CR>"),
+    dashboard.button("e", icons.ui.NewFile .. " > New file", ":ene <BAR> startinsert <CR>"),
+    dashboard.button("c", icons.ui.Gear .. " > Config", ":e ~/.config/nvim/init.lua <CR>"),
+    dashboard.button("q", icons.diagnostics.Error .. " > Quit", ":qa<CR>"),
 }
 
 -- local fortune = require("alpha.fortune")
