@@ -76,6 +76,7 @@ packer.startup(function()
   use "SmiteshP/nvim-navic"
   use "folke/trouble.nvim"
   use "j-hui/fidget.nvim"
+  use "folke/neodev.nvim"
 
   use "RRethy/vim-illuminate"
 
@@ -102,7 +103,10 @@ packer.startup(function()
   use "karb94/neoscroll.nvim"
 
   -- File Explorer
-  use "kyazdani42/nvim-tree.lua"
+  use {
+    "kyazdani42/nvim-tree.lua",
+    commit = '9c97e6449b0b0269bd44e1fd4857184dfa57bb4c'
+  }
 
   -- Buffer Switching
   use "ghillb/cybu.nvim"
@@ -125,7 +129,7 @@ packer.startup(function()
     run = ":TSUpdate",
   }
   use "JoosepAlviste/nvim-ts-context-commentstring"
-  use "p00f/nvim-ts-rainbow"
+  use "mrjones2014/nvim-ts-rainbow"
   -- use {"christianchiarulli/nvim-ts-rainbow"}
   --  use "nvim-treesitter/playground"
   use "windwp/nvim-ts-autotag"
@@ -136,8 +140,15 @@ packer.startup(function()
   -- bufferline
   -- use "akinsho/bufferline.nvim"
 
-  -- Notify
+  -- UI Overhauls
   use "rcarriga/nvim-notify"
+  use({
+    'folke/noice.nvim',
+    requires = {
+      "MunifTanjim/nui.nvim",
+      "rcarriga/nvim-notify",
+    }
+  })
 
   -- Git
   use "f-person/git-blame.nvim"

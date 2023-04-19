@@ -1,3 +1,4 @@
+require "config.lsp.neodev"
 require "config.lsp.lsp-signature"
 require "config.lsp.mason"
 require("config.lsp.handlers").setup()
