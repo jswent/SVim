@@ -84,6 +84,7 @@ local mappings = {
   ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
   ["b"] = { "<cmd>Telescope buffers<cr>", "Buffers", },
   ["/"] = { '<cmd>lua require("Comment.api").toggle.linewise.current()<CR>', "Comment" },
+  ["r"] = { '<cmd>w<CR><cmd>e ' .. vim.fn.expand('%') .. "<CR>", "Reload"},
 
   p = {
     name = "Packer",
@@ -197,6 +198,7 @@ local mappings = {
     name = "Treesitter",
     h = { "<cmd>TSHighlightCapturesUnderCursor<cr>", "Highlight" },
     p = { "<cmd>TSPlaygroundToggle<cr>", "Playground" },
+    r = { "<cmd>TSInstall javascript<CR>y<CR>", "Reload JS" },
   },
 
   C = {
