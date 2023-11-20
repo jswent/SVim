@@ -34,24 +34,31 @@ neogit.setup {
   sections = {
     untracked = {
       folded = false,
+      hidden = false
     },
     unstaged = {
       folded = false,
+      hidden = false
     },
     staged = {
       folded = false,
+      hidden = false
     },
     stashes = {
       folded = true,
+      hidden = false
     },
     unpulled = {
       folded = true,
+      hidden = false 
     },
     unmerged = {
       folded = false,
+      hidden = false
     },
     recent = {
       folded = true,
+      hidden = false
     },
   },
   -- override/add mappings
@@ -78,15 +85,6 @@ neogit.setup {
       ["<c-v>"] = "VSplitOpen",
       ["<c-x>"] = "SplitOpen",
       ["<c-t>"] = "TabOpen",
-      ["?"] = "HelpPopup",
-      ["D"] = "DiffPopup",
-      ["p"] = "PullPopup",
-      ["r"] = "RebasePopup",
-      ["P"] = "PushPopup",
-      ["c"] = "CommitPopup",
-      ["L"] = "LogPopup",
-      ["Z"] = "StashPopup",
-      ["b"] = "BranchPopup",
       -- ["<space>"] = "Stage",
       -- Removes the default mapping of "s"
       -- ["s"] = "",
