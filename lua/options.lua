@@ -35,6 +35,9 @@ vim.g.nord_borders = true
 vim.g.nord_disable_background = false
 vim.g.nord_italic = false
 
+-- set treesitter options
+vim.g.skip_ts_context_commentstring_module = true
+
 -- vimwiki options (move to config file later)
 vim.g.vimwiki_global_ext = 0
 
